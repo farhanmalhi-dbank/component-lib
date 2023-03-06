@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react';
-
-import { Tooltip, Typography } from 'antd';
+import React from 'react';
+import { Text, Tooltip } from '../../components';
 import Avatar from '../../components/atoms/avatar/avatar';
 import Icon from '../../components/atoms/icon/icon';
-const { Text } = Typography;
 
 const Right = () => {
   return (

@@ -11,9 +11,6 @@ export { default as ErrorBoundary } from './error-boundary/error-boundary';
 export { default as Form } from './form/form';
 export { default as Icons } from './icon/icons';
 export { default as Input } from './input/input';
-export { default as List } from './list/list';
-export { default as ListItem } from './list/list-item';
-export { default as ListItemMeta } from './list/list-item-meta';
 export { default as NotificationHandler } from './notification-handler/notification-handler';
 export { default as PageHeader } from './page-header/page-header';
 export { default as Pagination } from './pagination/pagination';
@@ -34,3 +31,7 @@ export { default as TextHighlighter } from './text-highlighter/text-highlighter'
 export { default as Body } from './typography/body';
 export { default as Heading } from './typography/heading';
 export { default as Text } from './typography/text';
+export { default as Menu } from './menu/menu';
+export { default as Tooltip } from './tooltip/tooltip';
+export * from './layout';
+export * from './list';

@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { Layout as AntdLayout, Menu } from 'antd';
 import Icon from '../components/atoms/icon/icon';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 import HeaderComponent from './header/header-component';
 import { MenuProps } from 'rc-menu';
 import t from '../utils/translation/t';
+import Layout from '../components/atoms/layout/layout';
+import AntdSider from '../components/atoms/layout/sider';
+import AntdContent from '../components/atoms/layout/content';
+import Menu from '../components/atoms/menu/menu';
 
-const { Sider, Content } = AntdLayout;
-
-const Layout = () => {
+const LayoutComponent = () => {
   const location = useLocation();
   let navigate = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
@@ -21,8 +22,8 @@ const Layout = () => {
     setCurrent(e.key);
   };
   return (
-    <AntdLayout>
-      <Sider trigger={null} collapsible collapsed={collapsed} className="ant-layout-sider-light" style={{ position: 'sticky' }}>
+    <Layout>
+      <AntdSider trigger={null} collapsible collapsed={collapsed} className="ant-layout-sider-light" style={{ position: 'sticky' }}>
         <div className={`${collapsed ? 'logo-collapsed' : 'logo'}`}>
           <Icon name="d-char" className="d-char" />
           {!collapsed && <Icon name="bank-char" className="bank-char" />}
@@ -46,15 +47,15 @@ const Layout = () => {
             }
           ]}
         />
-      </Sider>
-      <AntdLayout className="site-layout">
+      </AntdSider>
+      <Layout className="site-layout">
         <HeaderComponent collapsed={collapsed} collapseHandler={setCollapsed} />
-        <Content className="container">
+        <AntdContent className="container">
           <Outlet />
-        </Content>
-      </AntdLayout>
-    </AntdLayout>
+        </AntdContent>
+      </Layout>
+    </Layout>
   );
 };
 
-export default Layout;
+export default LayoutComponent;

@@ -1,10 +1,9 @@
 import React from 'react';
-import { Col, Layout, Row } from 'antd';
 import Left from './left';
 import Center from './center';
 import Right from './right';
-
-const { Header } = Layout;
+import { Col, Row } from '../../components';
+import AntdHeader from '../../components/atoms/layout/header';
 
 type PageProps = {
   collapseHandler: Function;
@@ -13,7 +12,7 @@ type PageProps = {
 
 export const HeaderComponent = ({ collapsed, collapseHandler }: PageProps) => {
   return (
-    <Header
+    <AntdHeader
       className="site-layout-background"
       style={{
         position: 'sticky',
@@ -30,7 +29,7 @@ export const HeaderComponent = ({ collapsed, collapseHandler }: PageProps) => {
           <Right />
         </Col>
       </Row>
-    </Header>
+    </AntdHeader>
   );
 };
 

@@ -1,7 +1,4 @@
-import { Menu, Typography } from 'antd';
-import t from '../../utils/translation/t';
-
-const { Text } = Typography;
+import { Menu, Text } from '../../components';
 
 export function AvatarMenu() {
   return (
@@ -10,7 +7,7 @@ export function AvatarMenu() {
         {
           key: '1',
           onClick: () => {},
-          label: <Text>{t('header.logout')}</Text>
+          label: <Text>Logout</Text>
         }
       ]}
     />
