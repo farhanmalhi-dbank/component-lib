@@ -2,7 +2,7 @@
   "name": "component-lib",
   "version": "0.0.1",
   "private": true,
-  "main": "index.tsx",
+  "main": "src/index.tsx",
   "dependencies": {
     "@ant-design/compatible": "^5.1.1",
     "@ant-design/pro-layout": "^7.8.2",
