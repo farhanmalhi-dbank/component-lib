@@ -1,8 +1,6 @@
-import { dateTimeFormat } from '../../../constants';
 import Col from '../../atoms/col/col';
 import Drawer from '../../atoms/drawer/drawer';
 import Row from '../../atoms/row/row';
-import { toDateString } from '../../../utils/date/date-util';
 import Statistic from '../../atoms/statistic/statistic';
 import { Transaction } from '../../../interfaces/transaction';
 import { Dispatch, SetStateAction } from 'react';
@@ -20,12 +18,6 @@ const TransactionDetailDrawer: React.FC<DrawerProp> = ({ transaction, drawerOpen
           <Row>
             <Col span={12}>
               <Statistic title={'Transaction ID'} value={transaction.id} />
-            </Col>
-            <Col span={12}>
-              <Statistic
-                title={'Date & Time'}
-                value={transaction.initiationDate ? toDateString(transaction.initiationDate, dateTimeFormat) : ''}
-              />
             </Col>
           </Row>
           <Row>

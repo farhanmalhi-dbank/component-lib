@@ -5,7 +5,6 @@ import Button from '../../components/atoms/button/button';
 import Icon from '../../components/atoms/icon/icon';
 import SearchDropDown from '../../components/molecules/search-dropdown/search-dropdown';
 import { useNavigate } from 'react-router-dom';
-import t from '../../utils/translation/t';
 
 const Center = () => {
   const navigate = useNavigate();
@@ -44,7 +43,7 @@ const Center = () => {
   return (
     <div className="dtools-header-center">
       <Input
-        placeholder={t('header.input.placeholder')}
+        placeholder="Search"
         value={search}
         data-test-id="global-search-input-test"
         onChange={(e) => setSearch(e.target.value)}

@@ -6,7 +6,6 @@ export { default as FilterDrawer } from './filter-drawer/filter-drawer';
 export { default as InputWithText } from './input-with-text/input-with-text';
 export { default as LabelValue } from './label-value/label-value';
 export { default as Map } from './map/map';
-export { default as MultipleTags } from './multiple-tags/multiple-tags';
 export { default as SearchDropDown } from './search-dropdown/search-dropdown';
 export { default as TableActions } from './table-action/table-actions';
 export { default as SkeletonDetail } from './skeleton-detail/skeleton-detail';

@@ -3,7 +3,6 @@ import Icon from '../components/atoms/icon/icon';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 import HeaderComponent from './header/header-component';
 import { MenuProps } from 'rc-menu';
-import t from '../utils/translation/t';
 import Layout from '../components/atoms/layout/layout';
 import AntdSider from '../components/atoms/layout/sider';
 import AntdContent from '../components/atoms/layout/content';
@@ -38,12 +37,7 @@ const LayoutComponent = () => {
             {
               key: '/',
               icon: <Icon name="dashboard-filled" />,
-              label: t('sideBar.dashboard')
-            },
-            {
-              key: '/configurations',
-              icon: <Icon name="setting-filled" />,
-              label: t('sideBar.configurations')
+              label: 'Home'
             }
           ]}
         />

@@ -1,6 +1,5 @@
 import React from 'react';
 import Icon from '../../components/atoms/icon/icon';
-import t from '../../utils/translation/t';
 
 type PageProps = {
   collapseHandler: Function;
@@ -13,12 +12,12 @@ const Left = ({ collapsed, collapseHandler }: PageProps) => {
       {collapsed ? (
         <>
           <Icon name="double-right-filled" clickHandler={() => collapseHandler(!collapsed)} />
-          <p>{t('header.expandMenu')}</p>
+          <p>Expand Menu</p>
         </>
       ) : (
         <>
           <Icon name="double-left-filled" clickHandler={() => collapseHandler(!collapsed)} />
-          <p>{t('header.collapseMenu')}</p>
+          <p>Collapse Menu</p>
         </>
       )}
     </div>

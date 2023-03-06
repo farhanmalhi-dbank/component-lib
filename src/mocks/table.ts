@@ -1,5 +1,4 @@
-import { dateTimeFormat, TRANSACTION_STATUS } from '../constants';
-import { toDateString } from '../utils/date/date-util';
+import { TRANSACTION_STATUS } from '../constants';
 
 interface TableDataType {
   key: string;
@@ -19,7 +18,7 @@ export const mockTable: TableDataType[] = [
   {
     key: '1',
     trans_id: 'db78db78db78db7856db78db78db78db7856db78db78db78db7856',
-    date_time_start: toDateString(new Date('2/13/22 11:11'), dateTimeFormat),
+    date_time_start: '2/3/22, 5:20pm',
     date_time_end: '2/3/22, 5:20pm',
     dbank_id_sender: 'ahmedmushtaq@gmail.com',
     amount: 90050,
@@ -33,7 +32,7 @@ export const mockTable: TableDataType[] = [
   {
     key: '2',
     trans_id: 'db78db78db78db7857',
-    date_time_start: toDateString(new Date('2/14/22 5:39 pm'), dateTimeFormat),
+    date_time_start: '2/14/22 5:39 pm',
     date_time_end: '2/3/22, 5:39am',
     dbank_id_sender: 'chmedmushtaq@gmail.com',
     amount: 1809090900808080808,
@@ -47,8 +46,7 @@ export const mockTable: TableDataType[] = [
   {
     key: '3',
     trans_id: 'db78db78db78db7857',
-    date_time_start: toDateString(new Date('2/4/22 5:39 pm'), dateTimeFormat),
-
+    date_time_start: '2/4/22 5:39 pm',
     date_time_end: '2/3/22, 5:39am',
     dbank_id_sender: 'dhmedmushtaq@gmail.com',
     amount: 1800,
