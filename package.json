@@ -1,0 +1,134 @@
+{
+  "name": "react-template",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/compatible": "^5.1.1",
+    "@ant-design/pro-layout": "^7.8.2",
+    "@craco/craco": "^6.4.5",
+    "@react-querybuilder/antd": "5.4.1",
+    "@tanstack/react-query": "^4.3.4",
+    "@types/leaflet": "^1.9.0",
+    "antd": "^5.2.2",
+    "axios": "^0.27.2",
+    "class-transformer": "^0.5.1",
+    "craco-less": "^1.16.0",
+    "graphql": "^16.6.0",
+    "leaflet": "^1.9.2",
+    "loglevel": "^1.8.0",
+    "nock": "^13.2.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^3.1.4",
+    "react-highlight-words": "^0.18.0",
+    "react-leaflet": "^4.1.0",
+    "react-leaflet-cluster": "^2.0.0",
+    "react-query": "^3.39.2",
+    "react-querybuilder": "^5.1.1",
+    "react-router-dom": "^6.3.0",
+    "reflect-metadata": "^0.1.13",
+    "socket.io-client": "^4.5.3",
+    "typescript": "^4.8.2",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "NODE_OPTIONS=--openssl-legacy-provider craco start",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider BUILD_PATH='./dist' GENERATE_SOURCEMAP=false craco build",
+    "build:inject-env": "cp sample.env .env && npx react-inject-env set -d ./dist",
+    "test": "craco test --coverage --maxWorkers=4",
+    "test:ci": "GENERATE_SOURCEMAP=false craco test --watchAll=false --ci --coverage --forceExit --detectOpenHandles --reporters=default --reporters=@casualbot/jest-sonar-reporter --maxWorkers=4",
+    "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "prepare": "husky install",
+    "codegen": "REACT_APP_GRAPHQL_URL=http://localhost:3000/graphql graphql-codegen --config codegen.ts",
+    "test-e2e:ci": "CI=true npx playwright test",
+    "test-e2e": "npx playwright test",
+    "test-e2e:update-snapshot": "npx playwright test --update-snapshots",
+    "test-e2e:show-report": "npx playwright show-report",
+    "test-e2e:codegen": "npx playwright codegen",
+    "test-e2e:run": "sh run-e2e.sh",
+    "test-e2e:run-update-snapshot": "sh run-e2e.sh update-snapshot"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ]
+  },
+  "devDependencies": {
+    "@casualbot/jest-sonar-reporter": "^2.2.5",
+    "@graphql-codegen/cli": "2.12.0",
+    "@graphql-codegen/import-types-preset": "^2.2.3",
+    "@graphql-codegen/typescript": "2.7.3",
+    "@graphql-codegen/typescript-operations": "2.5.3",
+    "@graphql-codegen/typescript-react-apollo": "3.3.3",
+    "@graphql-codegen/typescript-react-query": "^4.0.1",
+    "@playwright/test": "^1.26.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.0.0",
+    "@types/node": "^18.7.14",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-router-dom": "^5.3.3",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-check-file": "1.3.1",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "react-error-overlay": "6.0.11",
+    "react-inject-env": "2.1.0"
+  },
+  "lint-staged": {
+    "src/**/**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --config .prettierrc --write"
+    ],
+    "src/**/**/*.less": [
+      "prettier --config .prettierrc --write"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.(ts|tsx)",
+      "!src/**/*.test.(ts|tsx)",
+      "!src/serviceWorker.ts"
+    ],
+    "transformIgnorePatterns": [
+      "/node_modules/(?!react-leaflet)/"
+    ]
+  },
+  "@casualbot/jest-sonar-reporter": {
+    "suiteName": "jest tests",
+    "outputDirectory": "coverage",
+    "outputName": "test-report.xml",
+    "classNameTemplate": "{classname}",
+    "titleTemplate": "{title}",
+    "ancestorSeparator": " › ",
+    "relativePaths": "true"
+  }
+}

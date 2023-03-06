@@ -1,0 +1,68 @@
+{
+  "welcome": "welcome",
+  "customer": "Customer",
+  "roleManagement": "Role Management",
+  "userManagement": "User Management",
+  "configurations": "Configurations",
+  "login": {
+    "slogan": "Democratizing access to financial services",
+    "title": "Sign into Dbank CRM",
+    "description": "This workspace will allow you to sign in using your @din.global google account.",
+    "btn": {
+      "title": "Sign in using Google"
+    }
+  },
+  "sideBar": {
+    "dashboard": "Dashboard",
+    "customers": "Customers",
+    "configurations": "Configurations",
+    "roleManagement": "Role Management",
+    "userManagement": "User Management"
+  },
+  "accessDenied": {
+    "slogan": "Democratizing access to financial services",
+    "title": "You don't have access to this portal",
+    "subTitle":"You request is in pending approval",
+    "btnRequest":"Request Access",
+    "btnLogout":"Logout"
+  },
+  "pageNotFound": {
+    "title": "404",
+    "subTitle":"Sorry, the page you visited does not exist.",
+    "btnText":"Go Back"
+  },
+  "header": {
+    "input": {
+      "placeholder": "Search",
+      "placeholderMessage": "Query Filters Applied",
+      "dropdown": {
+        "name": "Name",
+        "cnic": "CNIC",
+        "phoneNumber": "Phone Number",
+        "operators": {
+          "beginsWith": "begins with"
+        }
+      }
+    },
+    "expandMenu": "Expand Menu",
+    "collapseMenu": "Collapse Menu",
+    "logout": "Logout"
+  },
+  "customerPage": {
+    "title": "Customer"
+  },
+  "transaction-table": {
+    "transaction_id": "Trans ID",
+    "dateStart": "Date & Time Start",
+    "dateEnd": "Date & Time End",
+    "dbankId": "Dbank ID Sender",
+    "amount": "Amount",
+    "status": "Status",
+    "location": "Location",
+    "medium": "Medium",
+    "range": "Range",
+    "reason": "Reason",
+    "tags": "Tags",
+    "action": "Action"
+  }
+}

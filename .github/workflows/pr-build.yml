@@ -1,0 +1,10 @@
+name: pr-build
+on:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  pr-build:
+    uses: din-global/reusable-workflows/.github/workflows/tools-fe-pr-build.yml@main
+    secrets: inherit

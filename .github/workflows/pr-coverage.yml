@@ -1,0 +1,13 @@
+name: pr-coverage
+on:
+  workflow_run:
+    workflows:
+      - pr-build
+    types:
+      - completed
+
+jobs:
+  pr-coverage:
+    uses: din-global/reusable-workflows/.github/workflows/tools-fe-pr-coverage.yml@main
+    secrets: inherit
+

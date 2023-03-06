@@ -1,0 +1,10 @@
+name: Push on main
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: din-global/reusable-workflows/.github/workflows/tools-fe-push.yml@main
+    secrets: inherit

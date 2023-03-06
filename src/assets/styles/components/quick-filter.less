@@ -1,0 +1,50 @@
+.@{dtools-prefix} {
+  &-qf-main-container {
+    .ant-tag {
+      align-items: center;
+      padding: 4px 12px;
+      background: @tag-background-color;
+      border: 1px solid @tag-color;
+      color: @tag-color;
+      border-radius: 16px;
+      text-align: center;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      margin: 3px;
+      a:hover {
+        color: @tag-default-color;
+      }
+      &-checkable {
+        cursor: pointer;
+        &:not(&-checked):hover {
+          color: @primary-color;
+        }
+        &:active,
+        &-checked {
+          color: @text-color-inverse;
+        }
+        &-checked {
+          background-color: @primary-6;
+        }
+        &:active {
+          background-color: @primary-7;
+        }
+      }
+    }
+  }
+
+  &-qf-main-container-title {
+    margin-top: 10px;
+    margin-right: 10px;
+    max-width: 15%;
+    font-size: 16px;
+    line-height: 30px;
+    align-self: flex-start;
+    color: #434343;
+  }
+
+  &-qf-main-container-tags {
+    margin-bottom: 20px;
+  }
+}
